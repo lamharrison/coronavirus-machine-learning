@@ -27,11 +27,11 @@ model.compile(optimizer='adam', loss='mean_squared_error')
 model.summary()
 
 X_sars = np.array(X_sars)
-y_sars_norm = np.array(y_sars) / 9999
+y_sars_norm = np.array(y_sars) / 10000
 
 model.fit(X_sars, y_sars_norm, epochs=1000)
 y_sars_predict = model.predict(X_sars)
-y_sars_predict = y_sars_predict * 9999
+y_sars_predict = y_sars_predict * 10000
 fig1 = plt.figure(figsize=(7, 5))
 plt.scatter(X_sars, y_sars, label='Real Confirmed')
 plt.plot(X_sars, y_sars_predict, label='Predict Result')
@@ -40,4 +40,4 @@ plt.xlabel('Dates')
 plt.ylabel('Amount')
 plt.legend()
 plt.show()
-plt.savefig('model_graph.png')
+plt.savefig('model.png')
