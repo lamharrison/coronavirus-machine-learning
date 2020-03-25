@@ -1,6 +1,6 @@
 import json
 
-url = 'https://coronauk.isjeff.com/historyfigures'
+url = 'https://api.covid19uk.live/historyfigures'
 
 def read_url_to_json(url):
     import urllib.request as request
