@@ -11,10 +11,20 @@ This project intends to implement the data of confirmed cases of Corona Virus an
 
 ## Feature
 - [x] Implement an MLP model
-- [x] using real time data to predict epidemic trend within UK
+- [x] Using real time data to predict the epidemic trend within UK
+- [x] Using updated data to predict the epidemic trend within Italy
 - [ ] predict the epidemic trend of other European countries
 
+## Model
+Multilayer Perceptron (MLP) is also known as one of Artificial Neural Network and could utilise Backpropagation to train the model between different nodes. The activation functions of nodes define the output of nodes given an input or set of inputs
 
+![MLP.png](https://miro.medium.com/max/3446/1*-IPQlOd46dlsutIbUq1Zcw.png)
+
+We have considered that the characteristic of the number of people could be represented by the sigmoid function, who have been infected by the Corona Virus in the UK.
+
+We also used activation function like ReLU and linear functions.
+
+![MLP.png](https://miro.medium.com/max/1452/1*XxxiA0jJvPrHEJHD4z893g.png)
 
 ## Data source
-Jeff provided us with data for Corona Virus within the UK based on the government statistical result
+Jeff (https://isjeff.com/home) provided us with data for Corona Virus within the UK based on the government statistical result. Thanks for his help!
