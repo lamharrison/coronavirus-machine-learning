@@ -1,3 +1,5 @@
+<div align=left><img width="379" height="114.9" src="https://i.ibb.co/fkQvQfM/logo-prediction.png"/></div>
+
 UK Corona Virus Prediction
 ===========================
 ( To be continued ) This project intends to implement the data of confirmed cases of Corona Virus and predict the future trend of the epidemic in the United Kingdom and beyond.
@@ -27,4 +29,6 @@ We also used activation function like ReLU and linear functions.
 ![MLP.png](https://miro.medium.com/max/1452/1*XxxiA0jJvPrHEJHD4z893g.png)
 
 ## Data source
-Jeff (https://isjeff.com/home) provided us with data for Corona Virus within the UK based on the government statistical result. Thanks for his help!
+Jeff (https://isjeff.com/home) provided us with data for Corona Virus within the UK based on the government statistical result. Thanks for his help!    
+Global data: https://github.com/isjeffcom/coronavirusDataGlobal    
+UK data: https://github.com/isjeffcom/coronvirusFigureUK
