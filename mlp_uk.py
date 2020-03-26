@@ -30,11 +30,11 @@ corn_x = list(range(1, dates + 1))
 
 corn_x = np.array(corn_x)
 corn_y = np.array(corn_y)
-corn_y_norm = corn_y / 90000
+corn_y_norm = corn_y / 95000
 
 model.fit(corn_x, corn_y_norm, epochs=1000)
 corn_y_predict = model.predict(corn_x)
-corn_y_predict = corn_y_predict * 90000
+corn_y_predict = corn_y_predict * 95000
 fig1 = plt.figure(figsize=(7, 5))
 plt.scatter(corn_x, corn_y, label='Real Confirmed')
 plt.plot(corn_x, corn_y_predict, label='Predict Result')
@@ -71,13 +71,13 @@ uk_dates = list(range(1, uk_date_length + 1))
 uk_comfirmed_data = np.array(uk_comfirmed_data)
 uk_dates = np.array(uk_dates)
 
-uk_comfirmed_data_norm = uk_comfirmed_data / 25000
+uk_comfirmed_data_norm = uk_comfirmed_data / 27000
 
 # fit model
 model.fit(uk_dates, uk_comfirmed_data_norm, epochs=1000)
 
 uk_comfirmed_data_predict = model.predict(uk_dates)
-uk_comfirmed_data_predict = uk_comfirmed_data_predict * 25000
+uk_comfirmed_data_predict = uk_comfirmed_data_predict * 27000
 fig2 = plt.figure(figsize=(7, 5))
 plt.scatter(uk_dates, uk_comfirmed_data, label='Real Confirmed')
 plt.plot(uk_dates, uk_comfirmed_data_predict, label='Predict Result')
@@ -91,7 +91,7 @@ uk_comfirmed_data_predict = np.array(list(range(1, 101)))
 uk_comfirmed_predict_100 = model.predict(uk_comfirmed_data_predict)
 fig3 = plt.figure(figsize=(7, 5))
 plt.scatter(uk_dates, uk_comfirmed_data, label='Real Confirmed')
-plt.plot(uk_comfirmed_data_predict, uk_comfirmed_predict_100*25000, label='Predict Result')
+plt.plot(uk_comfirmed_data_predict, uk_comfirmed_predict_100*27000, label='Predict Result')
 plt.title('UK Prediction Confirmed VS Dates')
 plt.xlabel('Dates')
 plt.ylabel('Amount')
