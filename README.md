@@ -1,12 +1,12 @@
 UK Corona Virus Prediction
 ===========================
-This project intends to implement the data of confirmed cases of Corona Virus and predict the future trend of the epidemic in the United Kingdom and beyond.
+( To be continued ) This project intends to implement the data of confirmed cases of Corona Virus and predict the future trend of the epidemic in the United Kingdom and beyond.
 
-![header.png](https://cdn.cnn.com/cnnnext/dam/assets/200130165125-corona-virus-cdc-image-super-tease.jpg)
+<div align=center><img width="420" height="238" src="https://cdn.cnn.com/cnnnext/dam/assets/200130165125-corona-virus-cdc-image-super-tease.jpg"/></div>
 
 |Author|E-mail|Github
 |----|---|---
-|Zhishu Lin|lamharrison123@gmail.com|https://github.com/lamharrison
+|Big Tree|lamharrison123@gmail.com|https://github.com/lamharrison
 |Jiaming Lu|lujiammy@outlook.com|https://github.com/lujiammy
 
 ## Feature
