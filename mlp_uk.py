@@ -39,7 +39,7 @@ italy_absorb = corn_y[italy_dates_length-1]
 
 corn_y_norm = corn_y / italy_absorb
 
-model.fit(corn_x, corn_y_norm, epochs=5000, shuffle=False)
+model.fit(corn_x, corn_y_norm, epochs=13000, shuffle=False)
 corn_y_predict = model.predict(corn_x)
 corn_y_predict = corn_y_predict * italy_absorb
 fig1 = plt.figure(figsize=(7, 5))
@@ -75,7 +75,7 @@ ger_absorb = ger_corn_y[ger_dates_length-1]
 
 corn_y_norm = ger_corn_y / ger_absorb
 
-model.fit(ger_corn_x, corn_y_norm, epochs=10000, shuffle=False)
+model.fit(ger_corn_x, corn_y_norm, epochs=14000, shuffle=False)
 corn_y_predict = model.predict(ger_corn_x)
 corn_y_predict = corn_y_predict * ger_absorb
 fig_italy = plt.figure(figsize=(7, 5))
@@ -87,7 +87,42 @@ plt.ylabel('Amount')
 plt.legend()
 plt.show()
 
-# uk corona
+# France model
+
+with open('data/france_history.csv', 'r') as csvfile:
+    reader = csv.reader(csvfile)
+    rows = [row for row in reader]
+
+
+fr_corn_y = []
+
+for each_y in rows:
+    fr_corn_y.append(int(each_y[0]))
+
+
+dates = len(fr_corn_y)
+fr_corn_x = list(range(1, dates + 1))
+
+fr_corn_x = np.array(fr_corn_x)
+fr_corn_y = np.array(fr_corn_y)
+
+fr_dates_length = len(fr_corn_x)
+fr_absorb = fr_corn_y[fr_dates_length-1]
+
+corn_y_norm = fr_corn_y / fr_absorb
+
+model.fit(fr_corn_x, corn_y_norm, epochs=12000, shuffle=False)
+corn_y_predict = model.predict(fr_corn_x)
+corn_y_predict = corn_y_predict * fr_absorb
+fig_italy = plt.figure(figsize=(7, 5))
+plt.scatter(fr_corn_x, fr_corn_y, label='Real Confirmed')
+plt.plot(fr_corn_x, corn_y_predict, label='Predict Result')
+plt.title('France Confirmed VS Dates')
+plt.xlabel('Dates')
+plt.ylabel('Amount')
+plt.legend()
+plt.show()
+
 # uk corona
 import json
 
@@ -109,6 +144,8 @@ uk_comfirmed_data = []
 for each in each_data:
     uk_comfirmed_data.append(each['confirmed'])
 
+uk_comfirmed_data.append(14543)
+
 uk_date_length = len(uk_comfirmed_data)
 uk_dates = list(range(1, uk_date_length + 1))
 
@@ -120,7 +157,7 @@ uk_absorb_amount = uk_comfirmed_data[uk_date_length-1]
 uk_comfirmed_data_norm = uk_comfirmed_data / uk_absorb_amount
 
 # fit model
-model.fit(uk_dates, uk_comfirmed_data_norm, epochs=10000, shuffle=False)
+model.fit(uk_dates, uk_comfirmed_data_norm, epochs=12000, shuffle=False)
 
 uk_comfirmed_data_predict = model.predict(uk_dates)
 uk_comfirmed_data_predict = uk_comfirmed_data_predict * uk_absorb_amount
@@ -144,3 +181,8 @@ plt.ylabel('Amount')
 plt.legend()
 plt.savefig('uk_model_7_days.png')
 plt.show()
+
+# save prediction data
+with open('uk_prediction_data/uk_prediction.json', 'w') as f:
+    dict_uk_data = dict(zip(list(range(1, uk_date_length+8)), (uk_comfirmed_predict_7_days*uk_absorb_amount).tolist()))
+    json.dump(dict_uk_data, f)
