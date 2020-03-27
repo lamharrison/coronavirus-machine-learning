@@ -12,7 +12,7 @@ UK Corona Virus Prediction
 |Jiaming Lu|lujiammy@outlook.com|https://github.com/lujiammy
 
 ## Feature
-- [x] Implementing an MLP model
+- [x] Implementing MLP models, constructing approprate underlying functions
 - [x] Using real time data to predict the epidemic trend within UK
 - [x] Using updated data to predict the epidemic trend within Italy
 - [x] Predicting the epidemic trend of epidemic trend within Germany
@@ -27,7 +27,7 @@ We have considered that the characteristic of the number of people could be repr
 
 We also used activation functions like ReLU and linear functions.
 
-![MLP.png](https://miro.medium.com/max/1452/1*XxxiA0jJvPrHEJHD4z893g.png)
+![functions.png](https://miro.medium.com/max/1452/1*XxxiA0jJvPrHEJHD4z893g.png)
 
 ## Data source
 Jeff (https://isjeff.com/home) provided us with data for Corona Virus within the UK based on the government statistical result. Thanks for his help!    
