@@ -30,11 +30,16 @@ model.summary()
 
 corn_x = np.array(corn_x)
 corn_y = np.array(corn_y)
-corn_y_norm = corn_y / 110000
+italy_dates_length = len(corn_x)
+
+# set italy absorb
+italy_absorb = corn_y[italy_dates_length-1]
+
+corn_y_norm = corn_y / italy_absorb
 
 model.fit(corn_x, corn_y_norm, epochs=5000, shuffle=False)
 corn_y_predict = model.predict(corn_x)
-corn_y_predict = corn_y_predict * 110000
+corn_y_predict = corn_y_predict * italy_absorb
 fig1 = plt.figure(figsize=(7, 5))
 plt.scatter(corn_x, corn_y, label='Real Confirmed')
 plt.plot(corn_x, corn_y_predict, label='Predict Result')

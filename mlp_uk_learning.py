@@ -40,13 +40,15 @@ uk_dates = list(range(1, uk_date_length + 1))
 uk_comfirmed_data = np.array(uk_comfirmed_data)
 uk_dates = np.array(uk_dates)
 
-uk_comfirmed_data_norm = uk_comfirmed_data / 14658
+uk_absorb_amount = uk_comfirmed_data[uk_date_length-1]
+
+uk_comfirmed_data_norm = uk_comfirmed_data / uk_absorb_amount
 
 # fit model
-model.fit(uk_dates, uk_comfirmed_data_norm, epochs=5000, shuffle=False)
+model.fit(uk_dates, uk_comfirmed_data_norm, epochs=10000, shuffle=False)
 
 uk_comfirmed_data_predict = model.predict(uk_dates)
-uk_comfirmed_data_predict = uk_comfirmed_data_predict * 14658
+uk_comfirmed_data_predict = uk_comfirmed_data_predict * uk_absorb_amount
 fig2 = plt.figure(figsize=(7, 5))
 plt.scatter(uk_dates, uk_comfirmed_data, label='Real Confirmed')
 plt.plot(uk_dates, uk_comfirmed_data_predict, label='Predict Result')

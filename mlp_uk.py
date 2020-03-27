@@ -32,11 +32,16 @@ corn_x = list(range(1, dates + 1))
 
 corn_x = np.array(corn_x)
 corn_y = np.array(corn_y)
-corn_y_norm = corn_y / 110000
+italy_dates_length = len(corn_x)
+
+# set italy absorb
+italy_absorb = corn_y[italy_dates_length-1]
+
+corn_y_norm = corn_y / italy_absorb
 
 model.fit(corn_x, corn_y_norm, epochs=5000, shuffle=False)
 corn_y_predict = model.predict(corn_x)
-corn_y_predict = corn_y_predict * 110000
+corn_y_predict = corn_y_predict * italy_absorb
 fig1 = plt.figure(figsize=(7, 5))
 plt.scatter(corn_x, corn_y, label='Real Confirmed')
 plt.plot(corn_x, corn_y_predict, label='Predict Result')
@@ -62,30 +67,27 @@ for each_y in rows:
 dates = len(ger_corn_y)
 ger_corn_x = list(range(1, dates + 1))
 
-model = Sequential()
-model.add(Dense(units=50, input_dim=1, activation='relu'))
-model.add(Dense(units=50, activation='relu'))
-model.add(Dense(units=1, activation='sigmoid'))
-model.add(Dense(units=1, activation='linear'))
-model.compile(optimizer='adam', loss='mean_squared_error')
-model.summary()
+ger_corn_x = np.array(ger_corn_x)
+ger_corn_y = np.array(ger_corn_y)
 
-corn_x = np.array(ger_corn_x)
-corn_y = np.array(ger_corn_y)
-corn_y_norm = corn_y / 37323
+ger_dates_length = len(ger_corn_x)
+ger_absorb = ger_corn_y[ger_dates_length-1]
 
-model.fit(corn_x, corn_y_norm, epochs=5000,shuffle=False)
-corn_y_predict = model.predict(corn_x)
-corn_y_predict = corn_y_predict * 37323
+corn_y_norm = ger_corn_y / ger_absorb
+
+model.fit(ger_corn_x, corn_y_norm, epochs=10000, shuffle=False)
+corn_y_predict = model.predict(ger_corn_x)
+corn_y_predict = corn_y_predict * ger_absorb
 fig_italy = plt.figure(figsize=(7, 5))
-plt.scatter(corn_x, corn_y, label='Real Confirmed')
-plt.plot(corn_x, corn_y_predict, label='Predict Result')
+plt.scatter(ger_corn_x, ger_corn_y, label='Real Confirmed')
+plt.plot(ger_corn_x, corn_y_predict, label='Predict Result')
 plt.title('Germany Confirmed VS Dates')
 plt.xlabel('Dates')
 plt.ylabel('Amount')
 plt.legend()
 plt.show()
 
+# uk corona
 # uk corona
 import json
 
@@ -113,13 +115,15 @@ uk_dates = list(range(1, uk_date_length + 1))
 uk_comfirmed_data = np.array(uk_comfirmed_data)
 uk_dates = np.array(uk_dates)
 
-uk_comfirmed_data_norm = uk_comfirmed_data / 15658
+uk_absorb_amount = uk_comfirmed_data[uk_date_length-1]
+
+uk_comfirmed_data_norm = uk_comfirmed_data / uk_absorb_amount
 
 # fit model
-model.fit(uk_dates, uk_comfirmed_data_norm, epochs=5000, shuffle=False)
+model.fit(uk_dates, uk_comfirmed_data_norm, epochs=10000, shuffle=False)
 
 uk_comfirmed_data_predict = model.predict(uk_dates)
-uk_comfirmed_data_predict = uk_comfirmed_data_predict * 15658
+uk_comfirmed_data_predict = uk_comfirmed_data_predict * uk_absorb_amount
 fig2 = plt.figure(figsize=(7, 5))
 plt.scatter(uk_dates, uk_comfirmed_data, label='Real Confirmed')
 plt.plot(uk_dates, uk_comfirmed_data_predict, label='Predict Result')
@@ -133,7 +137,7 @@ uk_comfirmed_data_predict = np.array(list(range(1, uk_date_length+8)))
 uk_comfirmed_predict_7_days = model.predict(uk_comfirmed_data_predict)
 fig3 = plt.figure(figsize=(7, 5))
 plt.scatter(uk_dates, uk_comfirmed_data, label='Real Confirmed')
-plt.plot(uk_comfirmed_data_predict, uk_comfirmed_predict_7_days*15658, label='Predict Result')
+plt.plot(uk_comfirmed_data_predict, uk_comfirmed_predict_7_days*uk_absorb_amount, label='Predict Result')
 plt.title('UK Prediction Confirmed VS Dates')
 plt.xlabel('Dates')
 plt.ylabel('Amount')
