@@ -13,13 +13,13 @@ UK Corona Virus Prediction
 
 ## Feature
 - [x] Implementing MLP models and constructing appropriate underlying functions
-- [x] Using real time data to predict the epidemic trend within UK
-- [x] Using updated data to predict the epidemic trend within Italy
-- [x] Predicting the epidemic trend of epidemic trend within Germany
-- [ ] Predicting the epidemic trend of other European countries
+- [x] Extracting data from trustworthy data sources
+- [x] Using real-time data to predict the epidemic trend within the UK
+- [x] Predicting the epidemic trend of other similar-sized European countries including Italy, Germany and France
+- [x] plotting the result regarding confirmed result and predicting trend into the chart
 
 ## Model
-Multilayer Perceptron (MLP) is also known as one of Artificial Neural Networks(ANN) and could utilise Backpropagation to train the model between different nodes. The activation functions of nodes define the output of nodes given an input or set of inputs.
+This project basically used the Multilayer Perceptron (MLP) model for analysing data. MLP is also known as one of Artificial Neural Networks(ANN) and could utilise Backpropagation to train the model between different nodes. The activation functions of nodes define the output of nodes given an input or set of inputs.
 
 ![MLP.png](https://miro.medium.com/max/3446/1*-IPQlOd46dlsutIbUq1Zcw.png)
 
