@@ -12,7 +12,7 @@ UK Corona Virus Prediction
 |Jiaming Lu|lujiammy@outlook.com|https://github.com/lujiammy
 
 ## Feature
-- [x] Implementing MLP models, constructing approprate underlying functions
+- [x] Implementing MLP models and constructing appropriate underlying functions
 - [x] Using real time data to predict the epidemic trend within UK
 - [x] Using updated data to predict the epidemic trend within Italy
 - [x] Predicting the epidemic trend of epidemic trend within Germany
