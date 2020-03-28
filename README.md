@@ -22,22 +22,22 @@ This project intends to implement the data of confirmed Corona Virus cases and p
 ## Design
 This prediction problem set a perfect usage scenario for Transfer learning (TL) which is one of the Machine Learning domain and could gain updated knowledge through the process when solving one problem and applying it to a different but related problem. Thus this project has been divided into two part: analysing the data for the UK and all similar-sized countries; refining the model based on the prediction result.
 
-<div align=center><img width="420" height="320" src="https://github.com/lamharrison/coronavirus-machine-learning/blob/master/img/transfer%20learnig.jpg"/> <img width="400" height="320" src="https://www.researchgate.net/profile/Joseph_Lemley/publication/316748306/figure/fig2/AS:491777640669185@1494260334992/Illustration-of-transfer-learning-concept-where-the-rst-layers-in-network-A-and-network-B.png"/>
+<div align=center><img width="463" height="320" src="https://github.com/lamharrison/coronavirus-machine-learning/blob/master/img/transfer%20learnig.jpg"/> <img width="350" height="320" src="https://github.com/lamharrison/coronavirus-machine-learning/blob/master/img/transfer%20learning%20-%20NN.png"/>
 </div>
 
 ## Model
 This project basically applied the Multilayer Perceptron (MLP) model for analysing data. MLP is also known as one of Artificial Neural Networks(ANN) and could utilise Backpropagation to train the model between different nodes. The activation functions of nodes define the output of nodes given an input or set of inputs.
 
-<div align=center><img width="750" height="500" src="https://miro.medium.com/max/3446/1*-IPQlOd46dlsutIbUq1Zcw.png"/></div>
+<div align=center><img width="574" height="378" src="https://github.com/lamharrison/coronavirus-machine-learning/blob/master/img/%20MLP.png"/></div>
 
 We have primarily considered activation functions as sigmoid functions that almost perfectly represent the characteristics of the number of people who have been infected by the Corona Virus in the UK. We also used other activation functions like ReLU and linear functions for improving the precision.
-<div align=center><img src="https://miro.medium.com/max/1452/1*XxxiA0jJvPrHEJHD4z893g.png"/></div>
+<div align=center><img src="https://github.com/lamharrison/coronavirus-machine-learning/blob/master/img/activation%20functions.png"/></div>
 
 ## Sample Prediction
 To better demostrate the our project objective, one of the sample predictions has been attatched below.
 
 
-<div align=center><img src="https://github.com/lamharrison/coronavirus-machine-learning/blob/master/uk_model_7_days.png"/></div>
+<div align=center><img width="560" height="400" src="https://github.com/lamharrison/coronavirus-machine-learning/blob/master/img/uk_model_7_days.png"/></div>
 
 As the uncertainty of the epidemic remains high, the 7-day prediction would be recommended for using this prediction model. We would also constantly refine our model striving for better result.
 
