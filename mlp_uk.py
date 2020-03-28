@@ -39,7 +39,7 @@ italy_absorb = corn_y[italy_dates_length-1]
 
 corn_y_norm = corn_y / italy_absorb
 
-model.fit(corn_x, corn_y_norm, epochs=13000, shuffle=False)
+model.fit(corn_x, corn_y_norm, epochs=20000, shuffle=False)
 corn_y_predict = model.predict(corn_x)
 corn_y_predict = corn_y_predict * italy_absorb
 fig1 = plt.figure(figsize=(7, 5))
@@ -75,7 +75,7 @@ ger_absorb = ger_corn_y[ger_dates_length-1]
 
 corn_y_norm = ger_corn_y / ger_absorb
 
-model.fit(ger_corn_x, corn_y_norm, epochs=14000, shuffle=False)
+model.fit(ger_corn_x, corn_y_norm, epochs=20000, shuffle=False)
 corn_y_predict = model.predict(ger_corn_x)
 corn_y_predict = corn_y_predict * ger_absorb
 fig_italy = plt.figure(figsize=(7, 5))
@@ -111,7 +111,7 @@ fr_absorb = fr_corn_y[fr_dates_length-1]
 
 corn_y_norm = fr_corn_y / fr_absorb
 
-model.fit(fr_corn_x, corn_y_norm, epochs=12000, shuffle=False)
+model.fit(fr_corn_x, corn_y_norm, epochs=20000, shuffle=False)
 corn_y_predict = model.predict(fr_corn_x)
 corn_y_predict = corn_y_predict * fr_absorb
 fig_italy = plt.figure(figsize=(7, 5))
@@ -144,7 +144,8 @@ uk_comfirmed_data = []
 for each in each_data:
     uk_comfirmed_data.append(each['confirmed'])
 
-uk_comfirmed_data.append(14543)
+# add uk latest data manually
+uk_comfirmed_data.append(17089)
 
 uk_date_length = len(uk_comfirmed_data)
 uk_dates = list(range(1, uk_date_length + 1))
@@ -157,7 +158,7 @@ uk_absorb_amount = uk_comfirmed_data[uk_date_length-1]
 uk_comfirmed_data_norm = uk_comfirmed_data / uk_absorb_amount
 
 # fit model
-model.fit(uk_dates, uk_comfirmed_data_norm, epochs=12000, shuffle=False)
+model.fit(uk_dates, uk_comfirmed_data_norm, epochs=20000, shuffle=False)
 
 uk_comfirmed_data_predict = model.predict(uk_dates)
 uk_comfirmed_data_predict = uk_comfirmed_data_predict * uk_absorb_amount
