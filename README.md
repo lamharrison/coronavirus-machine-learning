@@ -35,4 +35,4 @@ The trustworthy data sources are always overwhelming essential to ensure the aut
 Global data: https://github.com/isjeffcom/coronavirusDataGlobal    
 UK data: https://github.com/isjeffcom/coronvirusFigureUK
 
-![data](https://github.com/lamharrison/coronavirus-machine-learning/blob/master/london%20visual.png)
+![data](https://github.com/lamharrison/coronavirus-machine-learning/blob/master/img/london%20visual.png)
