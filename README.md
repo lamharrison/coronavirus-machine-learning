@@ -9,7 +9,7 @@ UK Corona Virus Prediction
 |Author|E-mail|Github
 |----|---|---
 |Big Tree|lamharrison123@gmail.com|https://github.com/lamharrison
-|Jiaming Lu|lujiammy@outlook.com|https://github.com/lujiammy
+|Jimmy Lu|lujiammy@outlook.com|https://github.com/lujiammy
 
 ## Feature
 - [x] Implementing MLP models and constructing appropriate underlying functions
