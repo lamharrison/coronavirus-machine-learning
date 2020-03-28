@@ -28,7 +28,11 @@ We have primarily considered activation functions as sigmoid functions that almo
 ![activationfunctions.png](https://miro.medium.com/max/1452/1*XxxiA0jJvPrHEJHD4z893g.png)
 
 ## Data source
-The trustworthy data sources are always overwhelming essential to ensure the authenticity of reaching the prediction objective. We have collaborated with Jeff (https://isjeff.com/home) who provided us with valuable data for Corona Virus within the UK and other European countries based on the government statistical result. Thanks for his help! To find more information about our data sources, the attached link as follows could be friendly visited. 
+The trustworthy data sources are always overwhelming essential to ensure the authenticity of reaching the prediction objective. We have collaborated with Jeff (https://isjeff.com/home) who provided us with valuable data for Corona Virus within the UK and other European countries based on the government statistical result. Thanks for his help!
+
+ To find more information about our data sources, the attached link as follows could be friendly visited. 
 
 Global data: https://github.com/isjeffcom/coronavirusDataGlobal    
 UK data: https://github.com/isjeffcom/coronvirusFigureUK
+
+![data](https://github.com/lamharrison/coronavirus-machine-learning/blob/master/london%20visual.png)
