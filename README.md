@@ -31,8 +31,8 @@ We have primarily considered activation functions as sigmoid functions that almo
 To better demostrate the our project objective, one of the sample predictions has been attatched below.
 
 ![sample.png](https://github.com/lamharrison/coronavirus-machine-learning/blob/master/uk_model_7_days.png)
-A
-s the uncertainly of the epidemic remains high, the 7-day prediction would be recommended for using this model. We would also constantly refine our model striving for better result.
+
+As the uncertainly of the epidemic remains high, the 7-day prediction would be recommended for using this model. We would also constantly refine our model striving for better result.
 
 ## Data Source
 The trustworthy data sources are always overwhelmingly essential to ensure the authenticity of reaching the prediction objective. We have collaborated with Jeff (https://isjeff.com/home) who provided us with valuable data for Corona Virus within the UK and other European countries based on the government statistical result. Thanks for his help!
