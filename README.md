@@ -22,7 +22,10 @@ This project intends to implement the data of confirmed Corona Virus cases and p
 ## Design
 This prediction problem set a perfect usage scenario for Transfer learning (TL) which is one of the Machine Learning domain and could gain updated knowledge through the process when solving one problem and applying it to a different but related problem. Thus this project has been divided into two part: analysing the data for the UK all similar-sized countries and refine the model based on the prediction result.
 
-<div align=center><img width="420" height="238" src="https://github.com/lamharrison/coronavirus-machine-learning/blob/master/img/transfer%20learnig.jpg"/></div>
+<div align=center><img width="410" height="320" src="https://github.com/lamharrison/coronavirus-machine-learning/blob/master/img/transfer%20learnig.jpg"/> <img width="410" height="320" src="https://www.researchgate.net/profile/Joseph_Lemley/publication/316748306/figure/fig2/AS:491777640669185@1494260334992/Illustration-of-transfer-learning-concept-where-the-rst-layers-in-network-A-and-network-B.png"/>
+</div>
+
+
 
 ## Model
 This project basically applied the Multilayer Perceptron (MLP) model for analysing data. MLP is also known as one of Artificial Neural Networks(ANN) and could utilise Backpropagation to train the model between different nodes. The activation functions of nodes define the output of nodes given an input or set of inputs.
