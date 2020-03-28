@@ -22,7 +22,7 @@ This project intends to implement the data of confirmed Corona Virus cases and p
 ## Design
 This prediction problem set a perfect usage scenario for Transfer learning (TL) which is one of the Machine Learning domain and could gain updated knowledge through the process when solving one problem and applying it to a different but related problem. Thus this project has been divided into two part: analysing the data for the UK and all similar-sized countries; refining the model based on the prediction result.
 
-<div align=center><img width="463" height="320" src="https://github.com/lamharrison/coronavirus-machine-learning/blob/master/img/transfer%20learnig.jpg"/> <img width="350" height="320" src="https://github.com/lamharrison/coronavirus-machine-learning/blob/master/img/transfer%20learning%20-%20NN.png"/>
+<div align=center><img width="463" height="320" src="https://github.com/lamharrison/coronavirus-machine-learning/blob/master/img/transfer%20learning.jpeg"/> <img width="350" height="320" src="https://github.com/lamharrison/coronavirus-machine-learning/blob/master/img/transfer%20learning%20-%20NN.png"/>
 </div>
 
 ## Model
