@@ -26,9 +26,9 @@ This prediction problem set a perfect usage scenario for Transfer learning (TL) 
 </div>
 
 ## Model
-This project basically applied the Multilayer Perceptron (MLP) model for analysing data. MLP is also known as one of Artificial Neural Networks(ANN) and could utilise Backpropagation to train the model between different nodes. The activation functions of nodes define the output of nodes given an input or set of inputs.
+This project basically applied the Multilayer Perceptron (MLP) model for analysing data. MLP is also known as one of Artificial-model_7_days Neural Networks(ANN) and could utilise Backpropagation to train the model between different nodes. The activation functions of nodes define the output of nodes given an input or set of inputs.
 
-<div align=center><img width="574" height="378" src="https://github.com/lamharrison/coronavirus-machine-learning/blob/master/img/%20MLP.png"/></div>
+<div align=center><img width="574" height="378" src="https://github.com/lamharrison/coronavirus-machine-learning/blob/master/uk.png"/></div>
 
 We have primarily considered activation functions as sigmoid functions that almost perfectly represent the characteristics of the number of people who have been infected by the Corona Virus in the UK. We also used other activation functions like ReLU and linear functions for improving the precision.
 <div align=center><img src="https://github.com/lamharrison/coronavirus-machine-learning/blob/master/img/activation%20functions.png"/></div>
