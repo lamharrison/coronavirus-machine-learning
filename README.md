@@ -12,14 +12,20 @@ This project intends to implement the data of confirmed Corona Virus cases and p
 |Jimmy Lu|lujiammy@outlook.com|https://github.com/lujiammy
 
 ## Feature
-- [x] Implementing MLP models and constructing appropriate underlying functions
-- [x] Extracting data from trustworthy data sources
-- [x] Using real-time data to predict the epidemic trend within the UK
-- [x] Predicting the epidemic trend of other similar-sized European countries including Italy, Germany and France
-- [x] Plotting the result regarding real confirmed cases and our predicting trends into the chart
+- [x] Implementing MLP models and constructing appropriate underlying functions.
+- [x] Extracting data from trustworthy data sources.
+- [x] Using real-time data to predict the epidemic trend within the UK.
+- [x] Predicting the epidemic trend of other similar-sized European countries including Italy, Germany and France.
+- [x] Using prediction results from other similar-sized European countries to update the pattern that we have previously predicted within the UK.
+- [x] Plotting the result regarding real confirmed cases and our predicting trends into the chart.
+  
+## Design
+This prediction problem set a perfect usage scenario for Transfer learning (TL) which is one of the Machine Learning domain and could gain updated knowledge through the process when solving one problem and applying it to a different but related problem. Thus this project has been divided into two part: analysing the data for the UK all similar-sized countries and refine the model based on the prediction result.
+
+![TL.png](https://github.com/lamharrison/coronavirus-machine-learning/blob/master/img/transfer%20learnig.jpg)
 
 ## Model
-This project basically used the Multilayer Perceptron (MLP) model for analysing data. MLP is also known as one of Artificial Neural Networks(ANN) and could utilise Backpropagation to train the model between different nodes. The activation functions of nodes define the output of nodes given an input or set of inputs.
+This project basically applied the Multilayer Perceptron (MLP) model for analysing data. MLP is also known as one of Artificial Neural Networks(ANN) and could utilise Backpropagation to train the model between different nodes. The activation functions of nodes define the output of nodes given an input or set of inputs.
 
 ![MLP.png](https://miro.medium.com/max/3446/1*-IPQlOd46dlsutIbUq1Zcw.png)
 
