@@ -111,7 +111,7 @@ fr_absorb = fr_corn_y[fr_dates_length-1]
 
 corn_y_norm = fr_corn_y / fr_absorb
 
-model.fit(fr_corn_x, corn_y_norm, epochs=25000, shuffle=False)
+model.fit(fr_corn_x, corn_y_norm, epochs=27000, shuffle=False)
 corn_y_predict = model.predict(fr_corn_x)
 corn_y_predict = corn_y_predict * fr_absorb
 fig_italy = plt.figure(figsize=(7, 5))
@@ -154,7 +154,7 @@ uk_comfirmed_data = np.array(uk_comfirmed_data)
 uk_dates = np.array(uk_dates)
 
 # increase absorb value
-uk_absorb_amount = uk_comfirmed_data[uk_date_length-1]*1.6
+uk_absorb_amount = uk_comfirmed_data[uk_date_length-1]*1.7
 
 uk_comfirmed_data_norm = uk_comfirmed_data / uk_absorb_amount
 
