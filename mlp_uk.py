@@ -145,7 +145,7 @@ for each in each_data:
     uk_comfirmed_data.append(each['confirmed'])
 
 # add uk latest data manually
-uk_comfirmed_data.append(25150)
+uk_comfirmed_data.append(29474)
 
 uk_date_length = len(uk_comfirmed_data)
 uk_dates = list(range(1, uk_date_length + 1))
@@ -154,12 +154,12 @@ uk_comfirmed_data = np.array(uk_comfirmed_data)
 uk_dates = np.array(uk_dates)
 
 # increase absorb value
-uk_absorb_amount = uk_comfirmed_data[uk_date_length-1]*1.7
+uk_absorb_amount = uk_comfirmed_data[uk_date_length-1]*1.85
 
 uk_comfirmed_data_norm = uk_comfirmed_data / uk_absorb_amount
 
 # fit model
-model.fit(uk_dates, uk_comfirmed_data_norm, epochs=25000, shuffle=False)
+model.fit(uk_dates, uk_comfirmed_data_norm, epochs=27000, shuffle=False)
 
 uk_comfirmed_data_predict = model.predict(uk_dates)
 uk_comfirmed_data_predict = uk_comfirmed_data_predict * uk_absorb_amount
