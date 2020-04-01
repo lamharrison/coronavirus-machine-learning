@@ -1,0 +1,11 @@
+json5==0.8.4
+jsonschema==3.0.1
+Keras-Applications==1.0.8
+Keras-Preprocessing==1.1.0
+matplotlib==3.1.1
+numpy==1.16.4
+numpydoc==0.9.1
+tensorboard==2.1.1
+tensorflow==2.1.0
+tensorflow-estimator==2.1.0
+urllib3==1.24.2
