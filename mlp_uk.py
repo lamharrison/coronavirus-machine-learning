@@ -145,7 +145,7 @@ for each in each_data:
     uk_comfirmed_data.append(each['confirmed'])
 
 # add uk latest data manually
-uk_comfirmed_data.append(88621)
+uk_comfirmed_data.append(98476)
 
 uk_date_length = len(uk_comfirmed_data)
 uk_dates = list(range(1, uk_date_length + 1))
