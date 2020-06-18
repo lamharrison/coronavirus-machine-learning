@@ -35,7 +35,7 @@ corn_y = np.array(corn_y)
 italy_dates_length = len(corn_x)
 
 # set italy absorb
-italy_absorb = corn_y[italy_dates_length-1]*1.3
+italy_absorb = corn_y[italy_dates_length-1]*1.1
 
 corn_y_norm = corn_y / italy_absorb
 
@@ -71,7 +71,7 @@ ger_corn_x = np.array(ger_corn_x)
 ger_corn_y = np.array(ger_corn_y)
 
 ger_dates_length = len(ger_corn_x)
-ger_absorb = ger_corn_y[ger_dates_length-1]*1.3
+ger_absorb = ger_corn_y[ger_dates_length-1]*1.1
 
 corn_y_norm = ger_corn_y / ger_absorb
 
@@ -107,7 +107,7 @@ fr_corn_x = np.array(fr_corn_x)
 fr_corn_y = np.array(fr_corn_y)
 
 fr_dates_length = len(fr_corn_x)
-fr_absorb = fr_corn_y[fr_dates_length-1]*1.3
+fr_absorb = fr_corn_y[fr_dates_length-1]*1.1
 
 corn_y_norm = fr_corn_y / fr_absorb
 
@@ -145,7 +145,7 @@ for each in each_data:
     uk_comfirmed_data.append(each['confirmed'])
 
 # add uk latest data manually
-uk_comfirmed_data.append(206715)
+# uk_comfirmed_data.append(206715)
 
 uk_date_length = len(uk_comfirmed_data)
 uk_dates = list(range(1, uk_date_length + 1))
@@ -154,7 +154,7 @@ uk_comfirmed_data = np.array(uk_comfirmed_data)
 uk_dates = np.array(uk_dates)
 
 # increase absorb value
-uk_absorb_amount = uk_comfirmed_data[uk_date_length-1]*1.75
+uk_absorb_amount = uk_comfirmed_data[uk_date_length-1]*1.3
 
 uk_comfirmed_data_norm = uk_comfirmed_data / uk_absorb_amount
 
